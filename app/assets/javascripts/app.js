@@ -1,6 +1,6 @@
 var Todos = Ember.Application.create();
 
-Todos.ApplicationAdapter = DS.FixtureAdapter.extend();
+Todos.ApplicationAdapter = DS.ActiveModelAdapter.extend();
 
 Todos.TodosController = Ember.ArrayController.extend({
   actions: {
