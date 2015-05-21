@@ -6,5 +6,3 @@
 #= require ember_todo_mvc
 
 # for more details see: http://emberjs.com/guides/application/
-window.EmberTodoMvc = Ember.Application.create()
-
