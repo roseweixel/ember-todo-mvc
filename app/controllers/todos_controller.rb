@@ -4,13 +4,13 @@ class TodosController < ApplicationController
   end
 
   def create
-    safe_todo = params.require(:todo).permit(:body, :title, :levelOfRage)
+    safe_todo = params.require(:todo).permit(:title, :isCompleted)
     todo = Todo.create(safe_todo)
     render json: todo
   end
 
   def update
-    safe_todo = params.require(:todo).permit(:body, :title, :levelOfRage)
+    safe_todo = params.require(:todo).permit(:title, :isCompleted)
     todo = Todo.find(params[:id])
     todo.update(safe_todo)
     render json: todo
